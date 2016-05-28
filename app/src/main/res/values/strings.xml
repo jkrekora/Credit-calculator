@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Credit calculator</string>
+    <string name="hello">Hello!</string>
+    <string name="description">This application allows you to calculate the cost of credit.</string>
+    <string name="button">Press to start</string>
+    <string name="university">Cracow University of Economics</string>
+    <string name="field">Field of study: Applied Informatics</string>
+    <string name="part_of">The project was made as a part of Programming Mobile Systems classes</string>
+    <string name="authors">Authors: Jakub Krekora and Serhiy Karaptan</string>
+    <string name="group">Group: KrDZIs3012Io</string>
+    <string name="year">Year: 2016</string>
+
+    <string name="command1">Enter data:</string>
+    <string name="amount">Credit amount (value)</string>
+    <string name="commission">Commission</string>
+    <string-array name="spinner">
+        <item>do not include</item>
+        <item>increases the amount</item>
+        <item>reduces the amount</item>
+        <item>paid separately</item>
+    </string-array>
+    <string name="commission_size">Commission size (%)</string>
+    <string name="interest_rate">Interest rate (%)</string>
+    <string name="loan_period">Loan period (months)</string>
+    <string name="installment_type">Installment type</string>
+    <string-array name="spinner1">
+        <item>equal</item>
+        <item>decreasing</item>
+    </string-array>
+    <string name="button1">Calculate</string>
+
+    <string name="commission1">Commission:</string>
+    <string name="amount_credited">The amount credited:</string>
+    <string name="amount_paid">Amount to be paid:</string>
+    <string name="sum">Sum payments:</string>
+    <string name="button2">Save</string>
+    <string name="button3">Reset</string>
+    <string name="button4">Show details</string>
+    <string name="button5">Save details</string>
+
+</resources>
