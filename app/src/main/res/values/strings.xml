@@ -11,7 +11,7 @@
     <string name="year">Year: 2016</string>
 
     <string name="command1">Enter data:</string>
-    <string name="amount">Credit amount (value)</string>
+    <string name="amount">Credit amount</string>
     <string name="commission">Commission</string>
     <string-array name="spinner">
         <item>do not include</item>
@@ -19,9 +19,9 @@
         <item>reduces the amount</item>
         <item>paid separately</item>
     </string-array>
-    <string name="commission_size">Commission size (%)</string>
-    <string name="interest_rate">Interest rate (%)</string>
-    <string name="loan_period">Loan period (months)</string>
+    <string name="commission_size">Commission size</string>
+    <string name="interest_rate">Interest rate</string>
+    <string name="loan_period">Loan period</string>
     <string name="installment_type">Installment type</string>
     <string-array name="spinner1">
         <item>equal</item>
@@ -29,13 +29,6 @@
     </string-array>
     <string name="button1">Calculate</string>
 
-    <string name="commission1">Commission:</string>
-    <string name="amount_credited">The amount credited:</string>
-    <string name="amount_paid">Amount to be paid:</string>
-    <string name="sum">Sum payments:</string>
     <string name="button2">Save</string>
     <string name="button3">Reset</string>
-    <string name="button4">Show details</string>
-    <string name="button5">Save details</string>
-
 </resources>
