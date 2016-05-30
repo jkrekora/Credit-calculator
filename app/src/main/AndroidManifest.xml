@@ -33,6 +33,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jakub.creditcalculator.Data" />
         </activity>
+        <activity android:name=".Information"
+        android:parentActivityName=".Summary">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.jakub.creditcalculator.Summary" />
+        </activity>
     </application>
 
 </manifest>

@@ -124,12 +124,18 @@ public class Data extends AppCompatActivity {
         if (spinner.getSelectedItemId() != 0){
             comSize = comSize * crAmount;
         }
-        String message = ("Commission size: " + comSize +"\n" + "Credit amount: " + creditAmount1 + "\n" + "Amount to be paid: "
-                + amountToBePaid + "\n" + "Interest rate: " + interestRate1 * 100 + "%\n" + "Loan period: " + loanPeriod3 + " months");
+        String data1 = (Double.toString(comSize));
+        String data2 = (Double.toString(creditAmount1));
+        String data3 = (Double.toString(amountToBePaid));
+        String data4 = (Double.toString(interestRate1));
+        String data5 = ((Double.toString(loanPeriod1)));
 
         fund = installment;
         crAmount = creditAmount1;
-        String message1 = "";
+        String data7 = "";
+        String data8 = "";
+        String data9 = "";
+        String data10 = "";
 
         spinner1.getSelectedItemId();
         if (spinner1.getSelectedItemId() == 0) {
@@ -148,16 +154,28 @@ public class Data extends AppCompatActivity {
                 installment = installment * 100;
                 installment = Math.round(installment);
                 installment = installment / 100;
-                String[] text = new String[i];
-                text[i-1] = ("No " + i + " Interest: " + interest + " Fund: " + fund + " Installment: " + installment + "\n");
-                message1 = new StringBuilder(message1).append(text[i-1]).toString();
-                intent.putExtra("MESSAGE_DATA1", message1);
+                String[] message1 = new String[i];
+                String[] message2 = new String[i];
+                String[] message3 = new String[i];
+                String[] message4 = new String[i];
+                message1[i-1] = (Double.toString(i) + "\n");
+                message2[i-1] = (Double.toString(interest) + "\n");
+                message3[i-1] = (Double.toString(fund) + "\n");
+                message4[i-1] = (Double.toString(installment) + "\n");
+                data7 = new StringBuilder(data7).append(message1[i-1]).toString();
+                data8 = new StringBuilder(data8).append(message2[i-1]).toString();
+                data9 = new StringBuilder(data9).append(message3[i-1]).toString();
+                data10 = new StringBuilder(data10).append(message4[i-1]).toString();
+                intent.putExtra("DATA7", data7);
+                intent.putExtra("DATA8", data8);
+                intent.putExtra("DATA9", data9);
+                intent.putExtra("DATA10", data10);
             }
             costOfCredit = costOfCredit * 100;
             costOfCredit = Math.round(costOfCredit);
             costOfCredit = costOfCredit / 100;
-            String message2 = ("Payments sum: " + costOfCredit);
-            intent.putExtra("MESSAGE_DATA2", message2);
+            String data6 = (Double.toString(costOfCredit));
+            intent.putExtra("DATA6", data6);
         }
 
         if (spinner1.getSelectedItemId() == 1) {
@@ -176,18 +194,34 @@ public class Data extends AppCompatActivity {
                 installment = installment * 100;
                 installment = Math.round(installment);
                 installment = installment / 100;
-                String[] text = new String[i];
-                text[i-1] = ("No " + i + " Interest: " + interest + " Fund: " + fund + " Installment: " + installment + "\n");
-                message1 = new StringBuilder(message1).append(text[i-1]).toString();
-                intent.putExtra("MESSAGE_DATA1", message1);
+                String[] message1 = new String[i];
+                String[] message2 = new String[i];
+                String[] message3 = new String[i];
+                String[] message4 = new String[i];
+                message1[i-1] = (Double.toString(i) + "\n");
+                message2[i-1] = (Double.toString(interest) + "\n");
+                message3[i-1] = (Double.toString(fund) + "\n");
+                message4[i-1] = (Double.toString(installment) + "\n");
+                data7 = new StringBuilder(data7).append(message1[i-1]).toString();
+                data8 = new StringBuilder(data8).append(message2[i-1]).toString();
+                data9 = new StringBuilder(data9).append(message3[i-1]).toString();
+                data10 = new StringBuilder(data10).append(message4[i-1]).toString();
+                intent.putExtra("DATA7", data7);
+                intent.putExtra("DATA8", data8);
+                intent.putExtra("DATA9", data9);
+                intent.putExtra("DATA10", data10);
             }
             costOfCredit = costOfCredit * 100;
             costOfCredit = Math.round(costOfCredit);
             costOfCredit = costOfCredit / 100;
-            String message2 = ("Payments sum: " + costOfCredit);
-            intent.putExtra("MESSAGE_DATA2", message2);
+            String data6 = (Double.toString(costOfCredit));
+            intent.putExtra("DATA6", data6);
         }
-        intent.putExtra("MESSAGE_DATA", message);
+        intent.putExtra("DATA1", data1);
+        intent.putExtra("DATA2", data2);
+        intent.putExtra("DATA3", data3);
+        intent.putExtra("DATA4", data4);
+        intent.putExtra("DATA5", data5);
         startActivity(intent);
 
     }

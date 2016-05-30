@@ -28,7 +28,21 @@
         <item>decreasing</item>
     </string-array>
     <string name="button1">Calculate</string>
-
-    <string name="button2">Save</string>
     <string name="button3">Reset</string>
+
+    <string name="com_size">Commission size:</string>
+    <string name="cr_amount">Credit amount:</string>
+    <string name="am_paid">Amount to be paid:</string>
+    <string name="in_rate">Interest rate:</string>
+    <string name="lo_period">Loan period:</string>
+    <string name="pay_sum">Payments sum:</string>
+    <string name="no">No</string>
+    <string name="interest">Interest</string>
+    <string name="fund">Fund</string>
+    <string name="installment">Installment</string>
+    <string name="button2">Save</string>
+    <string name="button4">Information</string>
+
+    <string name="button6">How to calculate</string>
+    <string name="button5">Cracow University of Economic</string>
 </resources>
