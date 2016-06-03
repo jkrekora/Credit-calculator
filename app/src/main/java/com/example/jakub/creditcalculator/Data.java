@@ -134,8 +134,8 @@ public class Data extends AppCompatActivity {
         String data1 = new BigDecimal(comSize).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
         String data2 = new BigDecimal(creditAmount1).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
         String data3 = new BigDecimal(amountToBePaid).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
-        String data4 = Double.toString(interestRate1*100) + "%";
-        String data5 = Integer.toString(loanPeriod3) + " month(s)";
+        String data4 = interestRate.getText().toString() + "%";
+        String data5 = loanPeriod.getText().toString() + " month(s)";
 
         fund = installment;
         crAmount = creditAmount1;
