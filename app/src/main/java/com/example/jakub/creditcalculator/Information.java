@@ -21,8 +21,7 @@ public class Information extends AppCompatActivity {
                 "> margin of the bank or lending company\n" +
                 "> the cost of servicing the loan\n" +
                 "> the commission for the bank\n" +
-                "> the costs associated with credit insurance\n\n\n" +
-                "THANK YOU FOR USING THIS APP!");
+                "> the costs associated with credit insurance");
     }
 
     public void howToCalculate(View view) {

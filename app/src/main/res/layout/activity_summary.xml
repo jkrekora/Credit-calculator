@@ -22,7 +22,8 @@
             android:text="@string/com_size"
             android:textColor="#000000"
             android:layout_weight="1"
-            android:gravity="left" />
+            android:gravity="left"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -47,7 +48,8 @@
             android:text="@string/cr_amount"
             android:textColor="#000000"
             android:layout_weight="1"
-            android:gravity="left" />
+            android:gravity="left"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -72,7 +74,8 @@
             android:text="@string/am_paid"
             android:textColor="#000000"
             android:layout_weight="1"
-            android:gravity="left" />
+            android:gravity="left"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -97,7 +100,8 @@
             android:text="@string/in_rate"
             android:textColor="#000000"
             android:layout_weight="1"
-            android:gravity="left" />
+            android:gravity="left"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -122,7 +126,8 @@
             android:text="@string/lo_period"
             android:textColor="#000000"
             android:layout_weight="1"
-            android:gravity="left" />
+            android:gravity="left"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -147,7 +152,8 @@
             android:text="@string/pay_sum"
             android:textColor="#000000"
             android:layout_weight="1"
-            android:gravity="left" />
+            android:gravity="left"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -172,7 +178,8 @@
             android:text="@string/no"
             android:textColor="#000000"
             android:layout_weight="1"
-            android:gravity="left" />
+            android:gravity="left"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -180,7 +187,8 @@
             android:id="@+id/textView30"
             android:text="@string/interest"
             android:textColor="#000000"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -188,7 +196,8 @@
             android:id="@+id/textView31"
             android:text="@string/fund"
             android:textColor="#000000"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -196,7 +205,8 @@
             android:id="@+id/textView32"
             android:text="@string/installment"
             android:textColor="#000000"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
@@ -204,42 +214,43 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/linear14"
-        android:layout_above="@+id/button2">
+        android:layout_above="@+id/button2"
+        android:scrollbars="vertical">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linear7">
-
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView18"
-                android:textColor="#000000"
-                android:layout_weight="1" />
+                android:id="@+id/linear7">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView33"
-                android:textColor="#000000"
-                android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView18"
+                    android:textColor="#000000"
+                    android:layout_weight="1" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView34"
-                android:textColor="#000000"
-                android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView33"
+                    android:textColor="#000000"
+                    android:layout_weight="1" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView35"
-                android:textColor="#000000"
-                android:layout_weight="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView34"
+                    android:textColor="#000000"
+                    android:layout_weight="1" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView35"
+                    android:textColor="#000000"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
 
     </ScrollView>
 
@@ -248,9 +259,9 @@
         android:layout_height="wrap_content"
         android:text="@string/button2"
         android:id="@+id/button2"
-        android:onClick="save"
         android:layout_above="@+id/button4"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="save"/>
 
     <Button
         android:layout_width="match_parent"

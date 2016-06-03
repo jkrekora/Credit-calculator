@@ -2,6 +2,7 @@ package com.example.jakub.creditcalculator;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Environment;
 import android.renderscript.Double2;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,12 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.math.BigDecimal;
 
 public class Data extends AppCompatActivity {
 
@@ -124,11 +131,11 @@ public class Data extends AppCompatActivity {
         if (spinner.getSelectedItemId() != 0){
             comSize = comSize * crAmount;
         }
-        String data1 = (Double.toString(comSize));
-        String data2 = (Double.toString(creditAmount1));
-        String data3 = (Double.toString(amountToBePaid));
-        String data4 = (Double.toString(interestRate1));
-        String data5 = ((Double.toString(loanPeriod1)));
+        String data1 = new BigDecimal(comSize).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
+        String data2 = new BigDecimal(creditAmount1).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
+        String data3 = new BigDecimal(amountToBePaid).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
+        String data4 = new BigDecimal(interestRate1).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "%";
+        String data5 = Integer.toString(loanPeriod3) + " month(s)";
 
         fund = installment;
         crAmount = creditAmount1;
@@ -136,45 +143,38 @@ public class Data extends AppCompatActivity {
         String data8 = "";
         String data9 = "";
         String data10 = "";
+        String data11 = "";
 
         spinner1.getSelectedItemId();
         if (spinner1.getSelectedItemId() == 0) {
             for (int i = 1; i <= loanPeriod1; i++){
                 crAmount = crAmount - fund;
                 interest= (crAmount) * interestRate1 / 12;
-                interest = interest * 100;
-                interest = Math.round(interest);
-                interest = interest / 100;
                 installment = creditAmount1 * interestRate1 / 12 * (Math.pow((1 + interestRate1 / 12), loanPeriod1) / (Math.pow((1 + interestRate1 / 12), loanPeriod1) - 1));
                 fund = installment - interest;
-                fund = fund * 100;
-                fund = Math.round(fund);
-                fund = fund / 100;
                 costOfCredit = costOfCredit + installment;
-                installment = installment * 100;
-                installment = Math.round(installment);
-                installment = installment / 100;
                 String[] message1 = new String[i];
                 String[] message2 = new String[i];
                 String[] message3 = new String[i];
                 String[] message4 = new String[i];
-                message1[i-1] = (Double.toString(i) + "\n");
-                message2[i-1] = (Double.toString(interest) + "\n");
-                message3[i-1] = (Double.toString(fund) + "\n");
-                message4[i-1] = (Double.toString(installment) + "\n");
+                String[] message5 = new String[i];
+                message1[i-1] = (i + "\n");
+                message2[i-1] = (new BigDecimal(interest).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "\n");
+                message3[i-1] = (new BigDecimal(fund).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "\n");
+                message4[i-1] = (new BigDecimal(installment).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "\n");
+                message5[i-1] = (i + "   " + new BigDecimal(interest).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "   " + new BigDecimal(fund).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "   " + new BigDecimal(installment).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "\n");
                 data7 = new StringBuilder(data7).append(message1[i-1]).toString();
                 data8 = new StringBuilder(data8).append(message2[i-1]).toString();
                 data9 = new StringBuilder(data9).append(message3[i-1]).toString();
                 data10 = new StringBuilder(data10).append(message4[i-1]).toString();
+                data11 = new StringBuilder(data11).append(message5[i-1]).toString();
                 intent.putExtra("DATA7", data7);
                 intent.putExtra("DATA8", data8);
                 intent.putExtra("DATA9", data9);
                 intent.putExtra("DATA10", data10);
+                intent.putExtra("DATA11", data11);
             }
-            costOfCredit = costOfCredit * 100;
-            costOfCredit = Math.round(costOfCredit);
-            costOfCredit = costOfCredit / 100;
-            String data6 = (Double.toString(costOfCredit));
+            String data6 = new BigDecimal(costOfCredit).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
             intent.putExtra("DATA6", data6);
         }
 
@@ -182,39 +182,31 @@ public class Data extends AppCompatActivity {
             for (int i = 1; i <= loanPeriod1; i++) {
                 crAmount = crAmount - fund;
                 interest = (crAmount) * interestRate1 / 12;
-                interest = interest * 100;
-                interest = Math.round(interest);
-                interest = interest / 100;
                 installment = (creditAmount1 / loanPeriod1) * (1 + (loanPeriod1 - i + 1) * interestRate1 / 12);
                 fund = installment - interest;
-                fund = fund * 100;
-                fund = Math.round(fund);
-                fund = fund / 100;
                 costOfCredit = costOfCredit + installment;
-                installment = installment * 100;
-                installment = Math.round(installment);
-                installment = installment / 100;
                 String[] message1 = new String[i];
                 String[] message2 = new String[i];
                 String[] message3 = new String[i];
                 String[] message4 = new String[i];
-                message1[i-1] = (Double.toString(i) + "\n");
-                message2[i-1] = (Double.toString(interest) + "\n");
-                message3[i-1] = (Double.toString(fund) + "\n");
-                message4[i-1] = (Double.toString(installment) + "\n");
+                String[] message5 = new String[i];
+                message1[i-1] = (i + "\n");
+                message2[i-1] = (new BigDecimal(interest).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "\n");
+                message3[i-1] = (new BigDecimal(fund).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "\n");
+                message4[i-1] = (new BigDecimal(installment).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "\n");
+                message5[i-1] = (i + "   " + new BigDecimal(interest).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "   " + new BigDecimal(fund).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "   " + new BigDecimal(installment).setScale(2, BigDecimal.ROUND_HALF_UP).toString() + "\n");
                 data7 = new StringBuilder(data7).append(message1[i-1]).toString();
                 data8 = new StringBuilder(data8).append(message2[i-1]).toString();
                 data9 = new StringBuilder(data9).append(message3[i-1]).toString();
                 data10 = new StringBuilder(data10).append(message4[i-1]).toString();
+                data11 = new StringBuilder(data11).append(message5[i-1]).toString();
                 intent.putExtra("DATA7", data7);
                 intent.putExtra("DATA8", data8);
                 intent.putExtra("DATA9", data9);
                 intent.putExtra("DATA10", data10);
+                intent.putExtra("DATA11", data11);
             }
-            costOfCredit = costOfCredit * 100;
-            costOfCredit = Math.round(costOfCredit);
-            costOfCredit = costOfCredit / 100;
-            String data6 = (Double.toString(costOfCredit));
+            String data6 = new BigDecimal(costOfCredit).setScale(2, BigDecimal.ROUND_HALF_UP).toString();
             intent.putExtra("DATA6", data6);
         }
         intent.putExtra("DATA1", data1);
@@ -222,7 +214,22 @@ public class Data extends AppCompatActivity {
         intent.putExtra("DATA3", data3);
         intent.putExtra("DATA4", data4);
         intent.putExtra("DATA5", data5);
-        startActivity(intent);
+
+        if(creditAmount1 == 0.00){
+            Toast.makeText(getBaseContext(),"Enter credit amount!", Toast.LENGTH_SHORT).show();
+        }
+        else if(spinner.getSelectedItemId() == 1 && commissionSize1 == 0.00 || spinner.getSelectedItemId() == 2 && commissionSize1 == 0.00 || spinner.getSelectedItemId() == 3 && commissionSize1 == 0.00){
+            Toast.makeText(getBaseContext(),"Enter commission size!", Toast.LENGTH_SHORT).show();
+        }
+        else if(interestRate1 == 0.00){
+            Toast.makeText(getBaseContext(),"Enter interest rate!", Toast.LENGTH_SHORT).show();
+        }
+        else if(loanPeriod1 == 0.00){
+            Toast.makeText(getBaseContext(),"Enter loan period!", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            startActivity(intent);
+        }
 
     }
 
@@ -233,5 +240,24 @@ public class Data extends AppCompatActivity {
         loanPeriod.setText("");
         spinner.setSelection(0);
         spinner1.setSelection(0);
+    }
+
+    public void loadFile(View view) {
+        Intent intent = new Intent(this, LoadFile.class);
+        String path = Environment.getExternalStorageDirectory() + "/" + "credit";
+        File file = new File(path);
+        try {
+            FileInputStream fi = new FileInputStream(file);
+            int length = (int)file.length();
+            byte bytes[] = new byte[length];
+            fi.read(bytes);
+            String data12 = new String(bytes);
+            intent.putExtra("DATA12", data12);
+            startActivity(intent);
+        } catch (IOException e) {
+            Toast.makeText(getApplicationContext(),"No data to load", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
+
     }
 }

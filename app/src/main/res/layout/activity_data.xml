@@ -19,7 +19,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textSize="20sp"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +43,8 @@
             android:id="@+id/editText"
             android:layout_weight="1"
             android:inputType="numberDecimal"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:maxLength="9"/>
 
     </LinearLayout>
 
@@ -91,7 +93,8 @@
             android:id="@+id/editText1"
             android:layout_weight="1"
             android:inputType="numberDecimal"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:maxLength="3"/>
 
     </LinearLayout>
 
@@ -116,7 +119,8 @@
             android:id="@+id/editText2"
             android:layout_weight="1"
             android:inputType="numberDecimal"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:maxLength="3"/>
 
     </LinearLayout>
 
@@ -141,7 +145,8 @@
             android:id="@+id/editText3"
             android:layout_weight="1"
             android:inputType="numberDecimal"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:maxLength="3"/>
 
     </LinearLayout>
 
@@ -182,8 +187,17 @@
         android:layout_height="wrap_content"
         android:text="@string/button3"
         android:id="@+id/button3"
+        android:onClick="reset"
+        android:layout_above="@+id/button7"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button7"
+        android:id="@+id/button7"
+        android:onClick="loadFile"
         android:layout_above="@+id/button1"
-        android:layout_centerHorizontal="true"
-        android:onClick="reset"/>
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

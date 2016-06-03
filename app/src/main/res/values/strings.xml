@@ -29,6 +29,7 @@
     </string-array>
     <string name="button1">Calculate</string>
     <string name="button3">Reset</string>
+    <string name="button7">Load from file</string>
 
     <string name="com_size">Commission size:</string>
     <string name="cr_amount">Credit amount:</string>
@@ -43,6 +44,7 @@
     <string name="button2">Save</string>
     <string name="button4">Information</string>
 
+    <string name="thanks">THANK YOU FOR USING THIS APP!</string>
     <string name="button6">How to calculate</string>
     <string name="button5">Cracow University of Economic</string>
 </resources>

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jakub.creditcalculator">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,11 +36,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jakub.creditcalculator.Data" />
         </activity>
-        <activity android:name=".Information"
-        android:parentActivityName=".Summary">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.example.jakub.creditcalculator.Summary" />
+        <activity
+            android:name=".Information"
+            android:parentActivityName=".Summary">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jakub.creditcalculator.Summary" />
+        </activity>
+        <activity
+            android:name=".LoadFile"
+            android:parentActivityName=".Data">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jakub.creditcalculator.Data" />
         </activity>
     </application>
 

@@ -1,10 +1,18 @@
 package com.example.jakub.creditcalculator;
 
 import android.content.Intent;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class Summary extends AppCompatActivity {
 
@@ -18,6 +26,9 @@ public class Summary extends AppCompatActivity {
     TextView data8;
     TextView data9;
     TextView data10;
+
+    String data11;
+    String data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,13 +66,36 @@ public class Summary extends AppCompatActivity {
 
         data10 = (TextView)findViewById(R.id.textView35);
         data10.setText(extras.getString("DATA10"));
+
+        data11 = extras.getString("DATA11");
+
+        data = "Commission size: " + data1.getText().toString() + "\n"
+                + "Credit amount: " + data2.getText().toString() + "\n"
+                + "Amount to be paid: " + data3.getText().toString() + "\n"
+                + "Interest rate: " + data4.getText().toString() + "\n"
+                + "Loan period: " + data5.getText().toString() + "\n"
+                + "Payments sum: " + data6.getText().toString() + "\n\n"
+                + "No   Interest   Fund   Installment\n"
+                + data11;
     }
 
     public void save(View view) {
+        String fileName = "credit";
+        File file = new File(Environment.getExternalStorageDirectory(), fileName);
+        try {
+            FileOutputStream fo = new FileOutputStream(file);
+            fo.write(data.getBytes());
+            fo.close();
+            Toast.makeText(getApplicationContext(),"Data saved in internal storage/credit", Toast.LENGTH_LONG).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void showInformation(View view) {
         Intent intent = new Intent(this, Information.class);
         startActivity(intent);
     }
+
+
 }
