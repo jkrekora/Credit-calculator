@@ -47,4 +47,6 @@
     <string name="thanks">THANK YOU FOR USING THIS APP!</string>
     <string name="button6">How to calculate</string>
     <string name="button5">Cracow University of Economic</string>
+
+    <string name="button8">Save changes</string>
 </resources>

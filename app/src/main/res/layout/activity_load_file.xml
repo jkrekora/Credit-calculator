@@ -17,4 +17,13 @@
         android:textSize="12sp"
         android:textColor="#000000" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button8"
+        android:id="@+id/button8"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveChanges"/>
+
 </RelativeLayout>
