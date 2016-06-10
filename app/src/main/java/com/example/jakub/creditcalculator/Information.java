@@ -9,19 +9,10 @@ import android.widget.TextView;
 
 public class Information extends AppCompatActivity {
 
-    TextView information;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
-
-        information = (TextView)findViewById(R.id.textView36);
-        information.setText("Additional credit costs may be:\n\n" +
-                "> margin of the bank or lending company\n" +
-                "> the cost of servicing the loan\n" +
-                "> the commission for the bank\n" +
-                "> the costs associated with credit insurance");
     }
 
     public void howToCalculate(View view) {

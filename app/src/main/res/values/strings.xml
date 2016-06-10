@@ -30,6 +30,8 @@
     <string name="button1">Calculate</string>
     <string name="button3">Reset</string>
     <string name="button7">Load from file</string>
+    <string name="value">value</string>
+    <string name="months">months</string>
 
     <string name="com_size">Commission size:</string>
     <string name="cr_amount">Credit amount:</string>
@@ -44,9 +46,15 @@
     <string name="button2">Save to file</string>
     <string name="button4">Information</string>
 
+    <string name="information">Additional credit costs may be:</string>
+    <string name="information1">> margin of the bank or lending company</string>
+    <string name="information2">> the cost of servicing the loan</string>
+    <string name="information3">> the commission for the bank</string>
+    <string name="information4">> the costs associated with credit insurance"</string>
     <string name="thanks">THANK YOU FOR USING THIS APP!</string>
     <string name="button6">How to calculate</string>
     <string name="button5">Cracow University of Economic</string>
 
     <string name="button8">Save changes</string>
+
 </resources>

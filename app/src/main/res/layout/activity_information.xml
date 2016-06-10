@@ -14,9 +14,51 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView36"
-        android:textSize="20sp"
+        android:text="@string/information"
+        android:textSize="15sp"
         android:textColor="#000000"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView38"
+        android:text="@string/information1"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_below="@id/textView36" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView39"
+        android:text="@string/information2"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_below="@id/textView38" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView40"
+        android:text="@string/information3"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_below="@id/textView39" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView41"
+        android:text="@string/information4"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_below="@id/textView40" />
 
     <Button
         android:layout_width="match_parent"
@@ -43,7 +85,7 @@
         android:id="@+id/textView37"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textColor="#000000"
         android:textStyle="bold"
         android:gravity="center" />

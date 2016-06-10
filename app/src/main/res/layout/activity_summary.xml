@@ -261,7 +261,7 @@
         android:id="@+id/button2"
         android:layout_above="@+id/button4"
         android:layout_centerHorizontal="true"
-        android:onClick="save"/>
+        android:onClick="save" />
 
     <Button
         android:layout_width="match_parent"

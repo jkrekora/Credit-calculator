@@ -112,8 +112,8 @@ public class Data extends AppCompatActivity {
             loanPeriod1 = Double.parseDouble(text4);
         }
 
-        double loanPeriod2 = loanPeriod1;
-        int loanPeriod3 = (int) loanPeriod2;
+        //double loanPeriod2 = loanPeriod1;
+        //int loanPeriod3 = (int) loanPeriod2;
 
         spinner.getSelectedItemId();
         if (spinner.getSelectedItemId() == 1) {
@@ -258,6 +258,5 @@ public class Data extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"No data to load", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
-
     }
 }

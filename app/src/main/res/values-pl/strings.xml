@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kalkulator kredytowy</string>
+    <string name="hello">Witaj!</string>
+    <string name="description">Ta aplikacja umożliwia obliczenie kosztu kredytu.</string>
+    <string name="button">Naciśnij, aby rozpocząć</string>
+    <string name="university">Uniwersytet Ekonomiczny w Krakowie</string>
+    <string name="field">Kierunek studiów: Informatyka stosowana</string>
+    <string name="part_of">Praca wykonana w ramach zajęć z przedmiotu Programowanie systemów mobilnych</string>
+    <string name="authors">Autorzy: Jakub Krekora i Serhiy Karaptan</string>
+    <string name="group">Grupa: KrDZIs3012Io</string>
+    <string name="year">Rok: 2016</string>
+
+    <string name="command1">Podaj dane:</string>
+    <string name="amount">Kwota kredytu</string>
+    <string name="commission">Prowizja</string>
+    <string-array name="spinner">
+        <item>nie uwzględniaj</item>
+        <item>powiększa kwotę kredytu</item>
+        <item>zmniejsza kwotę kredytu</item>
+        <item>opłacona osobno</item>
+    </string-array>
+    <string name="commission_size">Wysokość prowizji</string>
+    <string name="interest_rate">Oprocentowanie kredytu</string>
+    <string name="loan_period">Okres kredytu</string>
+    <string name="installment_type">Rodzaj rat</string>
+    <string-array name="spinner1">
+        <item>równe</item>
+        <item>malejące</item>
+    </string-array>
+    <string name="button1">Oblicz</string>
+    <string name="button3">Resetuj</string>
+    <string name="button7">Załaduj z pliku</string>
+    <string name="value">wartość</string>
+    <string name="months">miesiące</string>
+
+    <string name="com_size">Wysokość prowizji:</string>
+    <string name="cr_amount">Kwota kredytowana:</string>
+    <string name="am_paid">Kwota do wypłaty:</string>
+    <string name="in_rate">Oprocentowanie kredytu:</string>
+    <string name="lo_period">Okres kredytu:</string>
+    <string name="pay_sum">Suma spłat:</string>
+    <string name="no">Nr</string>
+    <string name="interest">Odsetki</string>
+    <string name="fund">Kapitał</string>
+    <string name="installment">Rata</string>
+    <string name="button2">Zapisz do pliku</string>
+    <string name="button4">Informacje</string>
+
+    <string name="information">W skład kosztów dodatkowych kredytu mogą wejść:</string>
+    <string name="information1">> marża banku lub firmy pożyczkowej</string>
+    <string name="information2">> prowizja dla banku</string>
+    <string name="information3">> koszty obsługi kredytu czy pożyczki</string>
+    <string name="information4">> koszty związane z ubezpieczeniem kredytu"</string>
+    <string name="thanks">DZIĘKUJEMY ZA SKORZYSTANIE Z TEJ APLIKACJI!</string>
+    <string name="button6">Jak obliczać</string>
+    <string name="button5">Uniwersytet Ekonomiczny w Krakowie</string>
+
+    <string name="button8">Zapisz zmiany</string>
+</resources>

@@ -39,7 +39,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="value"
+            android:hint="@string/value"
             android:id="@+id/editText"
             android:layout_weight="1"
             android:inputType="numberDecimal"
@@ -142,7 +142,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="months"
+            android:hint="@string/months"
             android:id="@+id/editText3"
             android:inputType="numberDecimal"
             android:textColor="#000000"
